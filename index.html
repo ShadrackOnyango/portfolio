@@ -467,8 +467,16 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Contact Form -->
                 <div class="bg-light-navy p-6 rounded-lg shadow-xl">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="space-y-4">
+                    <form name="contact" 
+                        method="POST" 
+                        data-netlify="true" 
+                        netlify-honeypot="bot-field" 
+                        action="/success" 
+                        class="space-y-4"
+                        id="contact-form">
                         <!-- Hidden input for netlify -->
+                        <input type="hidden" name="form-name" value="contact" />
+                        <!-- This is required for Netlify forms to work -->
                         <input type="hidden" name="form-name" value="contact" />
                         <!-- Honeypot field to prevent spam -->
                         <p class="hidden">
